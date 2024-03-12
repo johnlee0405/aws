@@ -170,7 +170,7 @@ resource "aws_instance" "example" {
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.test-pub_2a.id
   vpc_security_group_ids = [aws_security_group.instance.id]
-  key_name               = "test-key"
+  key_name               = "my-key"
   user_data              = file("user-data.sh")
 
   tags = {
